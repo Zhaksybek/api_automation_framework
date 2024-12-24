@@ -26,13 +26,12 @@ public class ReqresinCRUD {
 
         System.out.println("Status code is: " +   response.statusCode() );
 
-
         Assert.assertEquals(200, response.statusCode() );
 
     }
 
 
-    @Test
+    @Test // Junit annotation
     public void test_2_createUser(){
         String url = "https://reqres.in/api/users";
 
