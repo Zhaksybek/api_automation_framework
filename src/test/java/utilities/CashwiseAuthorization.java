@@ -19,8 +19,8 @@ public class CashwiseAuthorization {
         String url = "https://backend.cashwise.us/api/myaccount/auth/login";
 
         Map<String, Object> requestBody = new HashMap<>();
-        requestBody.put("email", "codewisenew@gmail.com");
-        requestBody.put("password","123456" );
+        requestBody.put("email", Config.getProperty("email"));
+        requestBody.put("password",Config.getProperty("password") );
 
         Response response =
                 RestAssured.given()
