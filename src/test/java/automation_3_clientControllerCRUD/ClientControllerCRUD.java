@@ -53,7 +53,7 @@ public class ClientControllerCRUD {
 
         response.prettyPrint();
 
-        clientID= response.jsonPath().getString("client_id");
+        clientID = response.jsonPath().getString("client_id");
 
     }
 
