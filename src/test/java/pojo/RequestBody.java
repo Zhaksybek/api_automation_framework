@@ -1,5 +1,9 @@
 package pojo;
 
+
+import lombok.Data;
+
+@Data // It will create Getter and setter method automatically
 public class RequestBody {
 
     /**
@@ -14,35 +18,13 @@ public class RequestBody {
     private double balance;
 
 
-    public String getType_of_pay() {
-        return type_of_pay;
-    }
+    // Seller Controller
+    private String company_name;
+    private String seller_name;
+    private String email;
+    private String phone_number;
+    private String address;
 
-    public void setType_of_pay(String type_of_pay) {
-        this.type_of_pay = type_of_pay;
-    }
 
-    public String getBank_account_name() {
-        return bank_account_name;
-    }
 
-    public void setBank_account_name(String bank_account_name) {
-        this.bank_account_name = bank_account_name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
 }
