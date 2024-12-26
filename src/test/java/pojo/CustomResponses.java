@@ -1,25 +1,24 @@
 package pojo;
 
-public class RequestBody {
 
-    /**
-     *  RequestBody => purpose of this class is described all variables from our request body
-     *  We use this to set value our variables (Set all request body data)
-     */
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-    // Bank account Request Body
-    private String type_of_pay; // Encapsulation
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class CustomResponses {
+
+    private String id;
     private String bank_account_name;
     private String description;
     private double balance;
 
 
-    public String getType_of_pay() {
-        return type_of_pay;
+
+    public String getId() {
+        return id;
     }
 
-    public void setType_of_pay(String type_of_pay) {
-        this.type_of_pay = type_of_pay;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getBank_account_name() {
