@@ -25,6 +25,15 @@ public class CustomResponses {
     private String email;
 
 
+    // Product Controller
+    private int product_id;
+    private String product_title;
+    private double product_price;
+    private int service_type_id;
+    private int category_id;
+    private String product_description;
+
+
 
 
 }
