@@ -79,9 +79,47 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>maven-cucumber-reporting</artifactId>
+            <version>5.8.4</version>
+        </dependency>
 
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>5.8.4</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Optional: specify the output directory for the reports -->
+                            <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
+                            <!-- Optional: specify the buildNumber to include in the reports -->
+                            <buildNumber>1</buildNumber>
+                            <!-- Optional: specify the projectName to include in the reports -->
+                            <projectName>Your Project Name</projectName>
+                            <!-- Optional: set true to fail build on errors during feature file parsing -->
+                            <checkBuildResult>true</checkBuildResult>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
 
 
 
